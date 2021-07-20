@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-hardwearKey" version="0.0.2"
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name>Cordova hardwearKey Plugin</name>
+    <js-module name="cordova-plugin-hardwearKey" src="www/cordova-plugin-hardwearKey.js">
+        <clobbers target="cordova.plugin.hardwearKey"/>
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="hardwearKey">
+                <param name="android-package" value="cordova.plugin.hardwearKey.hardwearKey"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/cordova/plugin/hardwearKey/hardwearKey.java"
+                     target-dir="src/cordova/plugin/hardwearKey"/>
+    </platform>
+</plugin>
